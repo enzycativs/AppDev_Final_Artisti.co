@@ -2,11 +2,21 @@
 <html>
   <head>
     <body>
-  <div class ="regsuccess">
-    <img class="icon1" alt="" src="./public/1144760-1@2x.png" />
-    <h2>Successfully Registered</h2>
-    <p>Your information successfully submitted.</p>
-    <button type="button">OK</button>
-  </div>
+    </div>
+    <div class ="regsuccess" id="popup">
+      <img class="icon1" alt="" src="./public/1144760-1@2x.png" />
+      <h2>Successfully Registered</h2>
+      <p>Your information successfully submitted.</p>
+      <button type="button" onclick="closePopup">OK</button>
+    </div>
+    <script>
+      let regsuccess = document.getElementById("popup");
+      function openPopup(){
+        regsuccess.classList.add(open-regsuccess);
+      }
+      function closePopup(){
+        regsuccess.classList.remove(open-regsuccess);
+      }
+    </script>
   </head>
 </html>
