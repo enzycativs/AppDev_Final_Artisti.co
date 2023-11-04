@@ -133,7 +133,13 @@
           <div class="reg">Register</div>
         </div>
         <div class="regcus" id="regcusContainer">
-          <button type="reg">Register</button>
+          <button type="register" class="btn" onclick="openPopup()">Register</button>
+        </div>
+        <div class ="regsuccess" id="popup">
+          <img class="icon1" alt="" src="./public/1144760-1@2x.png" />
+          <h2>Successfully Registered</h2>
+          <p>Your information successfully submitted.</p>
+          <button type="button" onclick="closePopup">OK</button>
         </div>
         <div class="sellerslider" id="sellerSliderContainer">
           <div class="seller">Seller</div>
@@ -157,7 +163,8 @@
           <div class="contactinput"></div>
         </div>
         <div class="genderframe">
-          <input type="text" placeholder=" " required>
+          <input type="radio" name="Gender" value="Male">Male
+          <input type="radio" name="Gender" value="Female">Female
           <div class="gender">Gender</div>
           <div class="genderinput"></div>
         </div>
@@ -186,7 +193,6 @@
         <div class="backbtn1" id="backbtnText">back</div>
       </div>
     </div>
-
     <script>
       var popupcontinuebtnContainer = document.getElementById(
         "popupcontinuebtnContainer"
@@ -242,32 +248,6 @@
         });
       }
       
-      var regcusContainer = document.getElementById("regcusContainer");
-      if (regcusContainer) {
-        regcusContainer.addEventListener("click", function () {
-          var popup = document.getElementById("regSuccessContainer");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-      
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
-              }
-            };
-          popup.addEventListener("click", onClick);
-        });
-      }
-      
       var sellerSliderContainer = document.getElementById("sellerSliderContainer");
       if (sellerSliderContainer) {
         sellerSliderContainer.addEventListener("click", function (e) {
@@ -296,15 +276,14 @@
           x.type = "password";
         }
       }
+      var regcusContainer = document.getElementById("regcusContainer");
+      let regsuccess = document.getElementById("popup");
+      function openPopup(){
+        regsuccess.classList.add(open-regsuccess);
+      }
+      function closePopup(){
+        regsuccess.classList.remove(open-regsuccess);
+      }
       </script>
   </body>
-   <head>
-    <body>
-  <div class ="regsuccess">
-    <img class="icon1" alt="" src="./public/1144760-1@2x.png" />
-    <h2>Successfully Registered</h2>
-    <p>Your information successfully submitted.</p>
-    <button type="button">OK</button>
-  </div>
-  </head>
 </html>
