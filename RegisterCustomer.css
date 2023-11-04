@@ -574,27 +574,25 @@ input {
   top: 0;
   left: 0;
   font-weight: 600;
-  display: inline-block;
+  display: flex;
   width: 110.1px;
 }
 .genderframe,
 .genderinput {
   position: absolute;
-  width: 198px;
+  width: 20%;
+  column-gap: 2%;
+  padding: 0%;
+  margin: 0%;
 }
 input {
-  top: 29px;
-  left: 0;
-  border-radius: var(--br-xs);
-  background-color: var(--color-white);
-  column-gap: 4px;
-  width: 98%;
-  height: 52px;
+  padding: 0%;
+  margin: 0%;
 }
 .genderframe {
   top: 230px;
   left: 406px;
-  height: 81px;
+  height: 5px;
 }
 .birthdate {
   top: 0;
@@ -826,11 +824,18 @@ input{
   position: absolute;
   top: 355px;
   left: 675px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.1);
   text-align: center;
   padding: 0 20px 20px;
   color: black;
+  visibility: hidden;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s, top 0.5s;
+}
+.open-regsuccess{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
 }
 .regsuccess button{
   width: 50%;
