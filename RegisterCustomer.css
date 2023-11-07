@@ -575,15 +575,47 @@ input {
   left: 0;
   font-weight: 600;
   display: flex;
-  width: 110.1px;
+  width: 95px;
 }
 .genderframe,
 .genderinput {
   position: absolute;
-  width: 20%;
-  column-gap: 2%;
+  width: 10%;
+  column-gap: 0;
   padding: 0%;
   margin: 0%;
+}
+input[type="radio"]{
+  display: none;
+}
+label{
+  display: block;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+label span{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  border-radius: 20px;
+  transition: .25s ease;
+}
+label span :hover{
+  background-color: #d6d6e5;
+}
+label span:before{
+  content: "";
+  background-color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: .25s ease;
+  box-shadow: inset 0 0 0 2px grey;
+}
+input[type="radio"]:checked + span:before{
+  box-shadow: inset 0 0 0 10px grey;
 }
 input {
   padding: 0%;
@@ -592,7 +624,7 @@ input {
 .genderframe {
   top: 230px;
   left: 406px;
-  height: 5px;
+  height: 0;
 }
 .birthdate {
   top: 0;
@@ -753,7 +785,7 @@ input{
   top: 21.43%;
   left: 22.85%;
   font-weight: 800;
-  display: inline-block;
+  display: inline-block; 
 }
 .icon3,
 .tick-icon-30-11 {
