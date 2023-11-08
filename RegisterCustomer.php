@@ -26,26 +26,30 @@
         $birthDate = $_POST['birthDate'];
 
         $select = "SELECT * FROM `register-details-customer` WHERE emailAdd = '$emailAdd' && passWord = '$passWord' ";
+        
+
 
     $result = mysqli_query($conn, $select);
+    
 
-    if (mysqli_num_rows($result) > 0)
+
+    if ($result && mysqli_num_rows($result) > 0 )
     {
-        $error[] = 'User already exists!';
+      echo "<script> alert ('User Already Exist');  </script>";
     }
     else
     {
         if($passWord != $cpassWord){
-          $error[] = 'Password do not matched!';
+          echo "<script> alert ('Password Do not Match');  </script>";
         }
         else{
           $sql_query = "INSERT INTO `register-details-customer` (`firstName`, `lastName`, `middleName`, `contactNum`,`emailAdd`, `passWord`, `cpassWord`, `address`, `gender`, `birthDate`) VALUES ('$firstName', '$lastName', '$middleName', '$contactNum', '$emailAdd','$passWord', '$cpassWord','$address', '$gender','$birthDate')";
 
           if(mysqli_query($conn, $sql_query)){
-            echo '<script>document.getElementById("regSuccessContainer").setAttribute("register-success", "");</script>';
+            echo "<script> alert ('Registration Success!');  </script>";
           }
           else{
-            $error[] = 'Failed to insert data!';
+            
           }
         }          
     }
@@ -166,6 +170,8 @@
           </div>
         </div>
       </div>
+
+
       <form action="RegisterCustomer.php" method="post">
       <div
         class="registerareacustomer"
@@ -195,8 +201,8 @@
           
         
 
-          <div id="regSuccessContainer" class="popup-overlay" style="display: none">
-      <div class="regsuccess">
+          <div id="regSuccessContainer" class="popup-overlay" style="display: none" >
+      <div class="regsuccess" >
         <div class="regsuccess-child"></div>
         <div class="successfully-registered">Successfully Registered</div>
         <div class="icon2">
@@ -215,8 +221,8 @@
       </div>
     </div>
 
+          <button type="submit" name="save" >Register</button>
           
-          <button type="reg" name="save">Register</button>
           
 
 
@@ -247,7 +253,16 @@
           <div class="contactinput"></div>
         </div>
         <div class="genderframe">
-          <input type="text" placeholder=" " required id="gender" name="gender">
+          
+            <label>
+            <input type="radio" name="gender" value="Male"/>
+            <span>Male</span>
+            </label>
+            <label>
+            <input type="radio" name="gender" value="Female"/>
+            <span>Female</span>
+            </label>
+            
           <div class="gender">Gender</div>
           <div class="genderinput"></div>
         </div>
@@ -286,14 +301,14 @@
       );
       if (popupcontinuebtnContainer) {
         popupcontinuebtnContainer.addEventListener("click", function (e) {
-          window.location.href = "./LogIn.html";
+          window.location.href = "./LogIn.php";
         });
       }
       
       var artisticoContainer = document.getElementById("artisticoContainer");
       if (artisticoContainer) {
         artisticoContainer.addEventListener("click", function (e) {
-          window.location.href = "./index.html";
+          window.location.href = "./index.php";
         });
       }
       
@@ -324,46 +339,14 @@
       var logInContainer = document.getElementById("logInContainer");
       if (logInContainer) {
         logInContainer.addEventListener("click", function (e) {
-          window.location.href = "./LogIn.html";
+          window.location.href = "./LogIn.php";
         });
       }
       
       var logSlidersbtnContainer = document.getElementById("logSlidersbtnContainer");
       if (logSlidersbtnContainer) {
         logSlidersbtnContainer.addEventListener("click", function (e) {
-          window.location.href = "./LogIn.html";
-        });
-      }
-      
-      var regcusContainer = document.getElementById("regcusContainer");
-      if (regcusContainer) {
-        regcusContainer.addEventListener("click", function () {
-          var popup = document.getElementById("regSuccessContainer");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
-              }
-            };
-          popup.addEventListener("click", onClick);
-        });
-
-            document.getElementById("regcusContainer").addEventListener("click", function () {
-          if (document.getElementById("regSuccessContainer").hasAttribute("register-success")) {
-              document.getElementById("regSuccessContainer").style.display = "flex";
-          }
+          window.location.href = "./LogIn.php";
         });
       }
       
@@ -377,14 +360,14 @@
       var redirectLogIn = document.getElementById("redirectLogIn");
       if (redirectLogIn) {
         redirectLogIn.addEventListener("click", function (e) {
-          window.location.href = "./LogIn.html";
+          window.location.href = "./LogIn.php";
         });
       }
       
       var backbtnText = document.getElementById("backbtnText");
       if (backbtnText) {
         backbtnText.addEventListener("click", function (e) {
-          window.location.href = "./index.html";
+          window.location.href = "./index.php";
         });
       }
       function myFunction() {
@@ -395,6 +378,26 @@
           x.type = "password";
         }
       }
+
+      // Add an event listener to the form submission
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Simulate a successful registration (replace this with your database logic)
+      var registrationSuccess = true; // Set this to true if registration is successful
+
+      if (registrationSuccess) {
+        // Data saved successfully, show the success container
+        var regSuccessContainer = document.getElementById('regSuccessContainer');
+        if (regSuccessContainer) {
+          regSuccessContainer.style.display = 'block';
+        }
+      } else {
+        // Handle any other cases (e.g., display an error message)
+      }
+    });
+
+
 
 
       </script>
