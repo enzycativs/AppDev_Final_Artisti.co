@@ -1,7 +1,7 @@
-.lowerarea-item {
+.lowerarea-child {
   background-color: var(--color-gainsboro-100);
 }
-.lowerarea-item,
+.lowerarea-child,
 .lowerarea1 {
   position: absolute;
   top: 0;
@@ -9,13 +9,13 @@
   width: 1440px;
   height: 240px;
 }
-.span1 {
+.span {
   color: var(--color-black);
 }
-.all-about-the1 {
+.all-about-the {
   margin: 0;
 }
-.all-about-the-container1 {
+.all-about-the-container {
   position: absolute;
   top: 36px;
   left: 130px;
@@ -24,7 +24,7 @@
   font-family: var(--font-shrikhand);
   color: var(--color-gray);
 }
-.socialicons1 {
+.socialicons {
   position: absolute;
   top: 40px;
   left: 1177px;
@@ -32,13 +32,13 @@
   height: 51px;
   object-fit: cover;
 }
-.privacy-policy1 {
+.privacy-policy {
   position: absolute;
   top: 138px;
   left: 1157px;
 }
 .lowerframe1,
-.terms-conditions1 {
+.terms-conditions {
   position: absolute;
   top: 138px;
   left: 926px;
@@ -50,17 +50,17 @@
   height: 240px;
   font-size: var(--font-size-xl);
 }
-.middleframe-item {
+.middleframe-child {
   position: absolute;
   top: -1px;
   left: -1px;
-  background-color: var(--color-gainsboro-300);
+  background-color: transparent;
   border: 1px solid var(--color-black);
   box-sizing: border-box;
   width: 602px;
   height: 345px;
 }
-.image4-icon1 {
+.image4-icon {
   position: absolute;
   top: 21px;
   left: 0;
@@ -68,7 +68,7 @@
   height: 368px;
   object-fit: cover;
 }
-.about3 {
+.about {
   position: absolute;
   top: 68px;
   left: 686px;
@@ -79,19 +79,19 @@
   width: 494px;
   height: 231px;
 }
-.indicator1,
-.labelabout1 {
+.indicator,
+.labelabout {
   position: absolute;
   top: 51px;
   left: 702px;
   font-weight: 900;
 }
-.indicator1 {
+.indicator {
   left: 673px;
   display: inline-block;
   width: 57px;
 }
-.middleframe1 {
+.middleframe {
   position: absolute;
   top: 1026px;
   left: 130px;
@@ -99,7 +99,7 @@
   height: 389px;
   font-size: var(--font-size-29xl);
 }
-.image1-icon1 {
+.image1-icon {
   position: absolute;
   top: 66px;
   left: 0;
@@ -107,16 +107,16 @@
   height: 467px;
   object-fit: cover;
 }
-.glowarea1 {
+.glowarea {
   position: relative;
   border-radius: var(--br-base);
-  background-color: var(--color-coral-200);
+  background-color: rgba(255, 145, 77, 0.5);
   filter: blur(100px);
   width: 341px;
   height: 61px;
   z-index: 0;
 }
-.shop-now1 {
+.shop-now {
   position: absolute;
   margin: 0 !important;
   top: 13px;
@@ -124,21 +124,21 @@
   font-weight: 600;
   z-index: 1;
 }
-.redirectloginregister1 {
+.redirectloginregister {
   position: absolute;
   top: 375px;
   left: 550px;
   border-radius: var(--br-base);
-  background-color: var(--color-coral-100);
+  background-color: #ff914d;
   backdrop-filter: blur(100px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-3xs);
+  gap: 10px;
   color: var(--color-white);
 }
-.every-canvass-is1 {
+.every-canvass-is {
   position: absolute;
   top: 303px;
   left: 397px;
@@ -148,7 +148,7 @@
   width: 646px;
   height: 33px;
 }
-.image3-icon1 {
+.image3-icon {
   position: absolute;
   top: 161.7px;
   left: 502px;
@@ -156,7 +156,7 @@
   height: 128.7px;
   object-fit: cover;
 }
-.artistico3 {
+.artistico6 {
   position: absolute;
   top: 215px;
   left: 602.9px;
@@ -166,55 +166,55 @@
   width: 202.9px;
   height: 75.4px;
 }
-.image2-icon1 {
+.image2-icon {
   position: absolute;
   top: 137px;
   left: 477.5px;
-  border-radius: var(--br-4xs);
+  border-radius: 9px;
   width: 123.4px;
   height: 175.5px;
   object-fit: cover;
 }
-.artistico5 {
+.artistico8 {
   left: 0;
 }
-.about5,
-.artistico4,
-.artistico5 {
+.about2,
+.artistico7,
+.artistico8 {
   position: absolute;
   top: 0;
 }
-.artistico4 {
+.artistico7 {
   left: 130px;
   width: 199px;
   height: 58px;
   font-size: var(--font-size-21xl);
   font-family: var(--font-shrikhand);
 }
-.about5 {
+.about2 {
   left: 0;
   font-weight: 500;
 }
-.about4,
-.log-in2,
-.register2 {
+.about1,
+.log-in,
+.register {
   position: absolute;
   top: 10px;
   left: 878px;
   width: 94px;
   height: 38px;
-  cursor: pointer;
 }
-.log-in2,
-.register2 {
+.log-in,
+.register {
   left: 1030px;
   width: 127px;
+  cursor: pointer;
 }
-.log-in2 {
+.log-in {
   left: 1215px;
   width: 95px;
 }
-.upperframe1 {
+.upperframe2 {
   position: absolute;
   top: 22px;
   left: 0;
@@ -223,13 +223,13 @@
   font-size: var(--font-size-13xl);
   font-family: var(--font-work-sans);
 }
-.see-more3 {
+.see-more {
   font-weight: 300;
 }
-.see-more-container3 {
+.see-more-container {
   position: relative;
 }
-.sculpturebtn1 {
+.sculpturebtn {
   position: absolute;
   top: 181px;
   left: 198px;
@@ -241,28 +241,29 @@
   justify-content: center;
   padding: var(--padding-8xs) var(--padding-mid);
 }
-.sculpture1 {
+.sculpture {
   position: absolute;
   top: 144px;
   left: 208px;
   font-weight: 600;
 }
-.image6-icon1 {
+.image6-icon,
+.sculptureframe {
   position: absolute;
+  height: 244px;
+}
+.image6-icon {
   top: 0;
   left: 0;
   width: 240px;
-  height: 244px;
   object-fit: cover;
 }
-.sculptureframe1 {
-  position: absolute;
+.sculptureframe {
   top: 547px;
   left: 93px;
   width: 363px;
-  height: 244px;
 }
-.digitalbtn1 {
+.digitalbtn {
   position: absolute;
   top: 146px;
   left: 244px;
@@ -274,13 +275,13 @@
   justify-content: center;
   padding: var(--padding-8xs) var(--padding-mid);
 }
-.digital-art1 {
+.digital-art {
   position: absolute;
   top: 109px;
   left: 253px;
   font-weight: 600;
 }
-.image7-icon1 {
+.image7-icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -288,28 +289,28 @@
   height: 174px;
   object-fit: cover;
 }
-.digitalframe1,
-.image8-icon1 {
+.digitalframe,
+.image8-icon {
   position: absolute;
   top: 582px;
   left: 497px;
   width: 409px;
   height: 185px;
 }
-.image8-icon1 {
+.image8-icon {
   top: 0;
   left: 0;
   width: 193px;
   height: 156px;
   object-fit: cover;
 }
-.painting1 {
+.painting {
   position: absolute;
   top: 100px;
   left: 225px;
   font-weight: 600;
 }
-.paintingbtn1 {
+.paintingbtn {
   position: absolute;
   top: 137px;
   left: 208px;
@@ -321,7 +322,7 @@
   justify-content: center;
   padding: var(--padding-8xs) var(--padding-mid);
 }
-.paintingframe1 {
+.paintingframe {
   position: absolute;
   top: 591px;
   left: 922px;
@@ -330,13 +331,13 @@
 }
 .loginregisterframe {
   position: absolute;
-  height: 100%;
+  height: 114.05%;
   width: 100%;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: -14.05%;
   left: 0;
-  border-radius: var(--br-32xl);
+  border-radius: 51px;
   background: linear-gradient(
     180deg,
     rgba(176, 182, 188, 0.85),
@@ -344,7 +345,7 @@
     rgba(176, 182, 188, 0)
   );
 }
-.register4 {
+.register2 {
   position: relative;
   font-weight: 600;
   display: inline-block;
@@ -389,19 +390,21 @@
   position: relative;
   font-weight: 600;
 }
-button {
+button{
+  cursor: pointer;
   position: absolute;
-  top: 342px;
-  left: 364px;
+  top: 414px;
+  left: 293px;
   border-radius: var(--br-2xl);
   background-color: var(--color-dimgray-200);
+  width: 506px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-8xs) 108px;
-  cursor: pointer;
+  padding: var(--padding-8xs) var(--padding-89xl);
+  box-sizing: border-box;
   text-align: right;
   font-size: var(--font-size-17xl);
   color: var(--color-white);
@@ -418,7 +421,6 @@ input {
   position: absolute;
   height: 64.2%;
   width: 100%;
-  font-size: 25px;
   top: 35.8%;
   right: 0;
   bottom: 0;
@@ -430,9 +432,9 @@ input {
   position: absolute;
   height: 16.5%;
   width: 93.91%;
-  top: 48.68%;
+  top: 47.66%;
   right: 3.49%;
-  bottom: 34.83%;
+  bottom: 35.85%;
   left: 2.6%;
   font-size: var(--font-size-5xl);
 }
@@ -448,36 +450,54 @@ input {
   position: absolute;
   height: 16.5%;
   width: 94%;
-  top: 28.11%;
+  top: 23.63%;
   right: 3.49%;
-  bottom: 55.4%;
+  bottom: 59.88%;
   left: 2.51%;
   font-size: var(--font-size-5xl);
 }
-.dont-have-an {
-  position: absolute;
-  top: 82.48%;
-  left: 31.51%;
+.dont-have-an,
+.redirect-register {
+  top: 96.95%;
   font-weight: 600;
   text-align: right;
 }
+.dont-have-an {
+  position: absolute;
+  left: 33.3%;
+}
+.redirect-register {
+  left: 54.88%;
+  color: #b95212;
+}
 .backbtn,
+.logincustomer,
 .redirect-register {
   position: absolute;
   cursor: pointer;
 }
-.redirect-register {
-  top: 82.48%;
-  left: 53.09%;
-  font-weight: 600;
-  color: var(--color-chocolate-200);
-  text-align: right;
-}
 .backbtn {
-  top: 90.63%;
-  left: 44.49%;
+  top: 102.44%;
+  left: 47.36%;
   font-weight: 800;
-  color: var(--color-chocolate-100);
+  color: #b95f27;
+}
+.logincustomer button{
+  top: 342px;
+  left: 293px;
+  border-radius: var(--br-2xl);
+  background-color: var(--color-dimgray-200);
+  width: 506px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-8xs) var(--padding-89xl);
+  box-sizing: border-box;
+  text-align: right;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
 }
 .loginfrm {
   position: absolute;
