@@ -1,0 +1,93 @@
+.header {
+    position: absolute;
+    top: 3%;
+    left: 10.35%;
+}
+
+.artistico {
+    font-size: var(--font-size-21xl);
+    font-family: var(--font-shrikhand);
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+button:hover {
+    transform: rotate(360deg);
+}
+
+.btnLogout {
+    position: absolute;
+    top: 4%;
+    right: 5.35%;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-work-sans);
+}
+
+.ordersbtn {
+    position: absolute;
+    top: 3%;
+    right: 13.10%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.feedbackbtn {
+    position: absolute;
+    top: 3%;
+    right: 17.10%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.profileHead {
+    position: absolute;
+    top: 12.10%;
+    left: 10.35%;
+}
+
+.sellerProfile {
+    font-size: var(--font-size-21xl);
+    font-family: var(--font-work-sans);
+}
+
+.lowerarea {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    top: 90%;
+    background-color: var(--color-gainsboro-100);
+}
+
+.artistico-all-rights2 {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+}
+
+.titlelower {
+    position: absolute;
+    top: 40%;
+    left: 10.35%;
+}
+
+.frame {
+    position: absolute;
+    height: 70%;
+    width: 35%;
+    right: 5.35%;
+    top: 15%;
+    background-color: var(--color-gainsboro-100);
+    clip-path: inset(0% 0% 0% 0% round 10%);
+}
+
+.storeIcon {
+    border: none;
+    appearance: none;
+    background-color: inherit;
+    position: absolute;
+    top: 20%;
+    left: 10.35%;
+}
